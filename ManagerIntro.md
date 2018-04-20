@@ -269,7 +269,7 @@ We will use the API Manager GUI to setup the new API
 To begin: add `new API` from `Backend API` menu, from the `API menu`.
 Select – `Import Swagger API`
 
-![swaggerimport](https://github.com/harvthe/SimpleApis/blob/master/addswagger.JPG) 
+![swaggerimport](https://github.com/harvthe/SimpleApis/blob/master/addswagger.png) 
 
 From the next menu, upload the swagger file (nzbnv3)
  
@@ -279,7 +279,7 @@ Now, we need to virtualise this API by making it available as Fontend API
 Select `New API` from the frontend menu. 
 Select from existing backend API and search for the `New Zealand business numbers API`.
 
-![swaggerfe](https://github.com/harvthe/SimpleApis/blob/master/addswagger2.JPG) 
+![swaggerfe](https://github.com/harvthe/SimpleApis/blob/master/addswagger2.png) 
  
 
 For `inbound authentication` select `pass through` 
@@ -292,16 +292,30 @@ Since this is using a HTTPS service, we need to check if the server certificates
 Select `Save`.
 Check on the developer portal on how this API is documented and how SDKs are now generated for easy integration into your applications!
 
-#API Challenge for bonus points!
-The light on the table is controlled by the APIs from Axway Australia. Find te color of your team below and see if you can expose the API in your own organisation and change the color of your team as per the table below.
+# API Challenge for bonus points!
+
+The light on the table is controlled by the APIs from Axway Australia. Find the color of your team below and see if you can expose the API in your own organisation and change the color of your team as per the table below.
 
 Download the demo Swagger file https://github.com/harvthe/SimpleApis/blob/master/Demo%20API.json 
-Use the previous instructions to load this API.
+Use the previous instructions to load this API as a Swagger.
+This time from the frontend API menu setup  the `Outbound authentication profile` using the keys below (in the header) with the ID `APIKey` choose the API key of your team. 
+For your inbound security, choose whatever you feel is quickest!
+Set the colour of the light through your own API by using your developer portal or postman, whatever works for you!
 
-Team number | Color | ApiKey
+Team number | Color | APIKey
 -----------|--------|-------
 team 1      | red   | 9f0ad9f09ads0f9as0
 team 2| blue | 355235324234
+team 3| Yellow| 
+team 4| brown| 
+team 5| pink| 
+team 6| white| 
+team 7| orange| 
+team 8| green| 
+
+
+
+
 
 
 
