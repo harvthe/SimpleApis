@@ -48,7 +48,7 @@ Login to Apimanager
 apiadmin and password
 ```
 
-Add a new Backend API with the <new API> button, select New to create a manual API
+Add a new Backend API with the `New API` button, select `New` to create a `manual API`
 ![add backend api](https://github.com/harvthe/SimpleApis/blob/master/backend.png)  
 
 #### Creating a Backend API
@@ -99,13 +99,13 @@ Congratulations! You have now setup the backend system, <Save> your backend API 
 #### Creating a frontend API
 ![createfrontend](https://github.com/harvthe/SimpleApis/blob/master/addfrontend.png)
 
-The main menu adds a Frontend API from the API menu, New API from backend API
+The main menu adds a `Frontend API` from the API menu, use `New API from backend API`
 
 ![frontend_inbound](https://github.com/harvthe/SimpleApis/blob/master/createweather4.JPG)
 
 The first tab shows how your new API will be found, you will need API REST guidelines to make sure this is handled in a structured way, for now we will make the API avaialbe under api.yourcompany.com/weather
-We can define the inbound security, for now we will keep it an open API choose
-`<pass Through>`
+We can define the `inbound security`, for now we will keep it an open API choose
+``<pass Through>``
 
 Select how the security for your backend API (outbound) is done
 ![frontend_outbound](https://github.com/harvthe/SimpleApis/blob/master/createweather5.JPG)
