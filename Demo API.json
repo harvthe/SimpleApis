@@ -1,0 +1,43 @@
+{
+  "swagger" : "2.0",
+  "host" : "203.48.128.178:8065",
+  "basePath" : "/demo/v1",
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/light" : {
+      "get" : {
+        "description" : "use this to color a light",
+        "operationId" : "Light",
+        "summary" : "sets the state of the demo light",
+        "parameters" : [ {
+          "description" : "defines the desired color",
+          "required" : true,
+          "in" : "query",
+          "name" : "color",
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK"
+          },
+          "400" : {
+            "description" : "Bad Request"
+          }
+        }
+      }
+    }
+  },
+  "info" : {
+    "title" : "Demo API",
+    "description" : "APIs used to demonstrate the usefullnes of simple APIs",
+    "version" : "1.0",
+    "x-summary" : "collection of demo APIs"
+  },
+  "x-axway" : {
+    "corsEnabled" : true,
+    "basePaths" : [ "" ],
+    "serviceType" : "rest",
+    "deprecated" : false,
+    "tags" : { }
+  }
+}
