@@ -201,15 +201,18 @@ You got an email from Mark saying he has lost accesss to his API, you will need 
 To controll and govern APIs we need to use APIManager
 
 Login back to APImanager and select the `Clients` menu.
-![clients](https://github.com/harvthe/SimpleApis/blob/master/clients1.JPG) 
+![clients](https://github.com/harvthe/SimpleApis/blob/master/clients1.JPG)
  
 From the organizations tab, create a new organization  “marketing” give it a random email address and add the new API to the organization.
 
-![clientsOrg](https://github.com/harvthe/SimpleApis/blob/master/createorg.jpg) 
-Optional, press “generate code” this will allow people to self register on the portal with the created code.
+![clientsOrg](https://github.com/harvthe/SimpleApis/blob/master/createorg.jpg)
+
+##### Optional
+press “generate code” this will allow people to self register on the portal with the created code.
 For now, we will help Mark a little and setup his account for him.
 
 From the application developer tab in the clients menu, create a new user, create any name, but assure you select the marketing organization.
+
 ![clients_usr](https://github.com/harvthe/SimpleApis/blob/master/createusr.JPG) 
  
 **IMPORTANT:** after you press `Create` scroll down and select `change password`.
@@ -239,6 +242,7 @@ Mark has been abusing the API we need to limit his usage.
 
 Go back to the API manager GUI where we govern the usage of our APIs
 From the `clients` menu we can find the same application which mark created in the `applications` tab
+
 ![quota](https://github.com/harvthe/SimpleApis/blob/master/appquota.JPG) 
 
 Read through the details and see if you find the keys which Mark just created on the developer portal
@@ -249,47 +253,55 @@ From the `Quota` tab we will set a very low quota select `override default quota
 Select the weather API
 Throttle all methods `2` messages every `1` **Minute**
 
+Go back to your Postman application and check if the new key works. press `Send` 3 times. 
+Why does it only work 2 times ? :-)
 
+You have come to the end of the weather API excersise! 
 
+# Use case: New Zealand business information
+#### As an API team I want to easily make external APIs available as internal APIs so that we can accelerate internal development and keep full controll and visibility.
 
+You have been asked to make the New Zealand business number API available as a re-usable API within the Bank. The API is documented in Swagger format on the [new zealand developer portal](https://api.business.govt.nz/api/explore-apis/by-category)
+you can download the file directly https://github.com/harvthe/SimpleApis/blob/master/nzbnv3 
 
+We will use the API Manager GUI to setup the new API
 
+To begin: add `new API` from `Backend API` menu, from the `API menu`.
+Select – `Import Swagger API`
 
+![swaggerimport](https://github.com/harvthe/SimpleApis/blob/master/addswagger.JPG) 
 
-
-
-
- 
-Use case: New Zealand business information
-You have been asked to make the New Zealand business number API available as a re-usable API within the Bank. The API is documented in Swagger format on this link
-
-To begin: add “new API” from “backend API” menu, from the API menu.
-Select – Import Swagger API
+From the next menu, upload the swagger file (nzbnv3)
  
-
-From the next menu, upload the swagger file
- 
-And provide a name for the new backend API.
-Press import to start the import process. For details check on how all methods have been imported automatically
+Provide a `name` for the new backend API `new zealand business numbers API`.
+Press `import` to start the import process. For details check on how all `methods` have been imported automatically
 Now, we need to virtualise this API by making it available as Fontend API
-Select “New API” from the frontend menu. 
-Select from existing backend API and search for the New Zealand business numbers API.
+Select `New API` from the frontend menu. 
+Select from existing backend API and search for the `New Zealand business numbers API`.
 
+![swaggerfe](https://github.com/harvthe/SimpleApis/blob/master/addswagger2.JPG) 
  
 
-For inbound authentication select “pass through” 
-Provide a resource path according to your standards ”v1/newZealand”
+For `inbound authentication` select `pass through` 
+Provide a `resource path` according to your standards `v1/newZealand`
 For outbound keep as (we are not going to connect to the backend)
-In the API tab, check the API name, and change if desired. Change the version of your API to 1.0
-In the API summary note that this is a fake API.
-At the API methods, check if all methods have been integrated
-Since this is using a HTTPS service, we need to check if the server certificates have been loaded under “trusted certificates”
-Select Save.
+In the `API tab`, check the `API name`, and change if desired. Change the `version` of your API to `1.0`
+In the `API summary` note that this is a `fake API`.
+At the `API methods`, check if all methods have been integrated
+Since this is using a HTTPS service, we need to check if the server certificates have been loaded under `trusted certificates`
+Select `Save`.
 Check on the developer portal on how this API is documented and how SDKs are now generated for easy integration into your applications!
 
-Challenge for bonus points!
-Download the demo Swagger file 
+#API Challenge for bonus points!
+The light on the table is controlled by the APIs from Axway Australia. Find te color of your team below and see if you can expose the API in your own organisation and change the color of your team as per the table below.
 
+Download the demo Swagger file https://github.com/harvthe/SimpleApis/blob/master/Demo%20API.json 
+Use the previous instructions to load this API.
+
+Team number | Color | ApiKey
+-----------|--------|-------
+team 1      | red   | 9f0ad9f09ads0f9as0
+team 2| blue | 355235324234
 
 
 
